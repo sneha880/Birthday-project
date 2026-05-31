@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Maa ❤️</title>
     <style>
+      /* Base page styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -18,6 +19,9 @@
      background-repeat: no-repeat;
      background-attachment: scroll;
      min-height: 100vh;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
     #bgvideo{
       position: fixed;
@@ -33,17 +37,18 @@
     }
     h1 {
   margin-top: 40px;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: white;
+  padding: 10px;
 }
 
 .card {
-  background: white;
-  margin: 30px auto;
+  background:rgba(255,255,255,0.9);
+  margin: 15px auto;
   padding: 20px;
   border-radius: 20px;
-  width: 80%;
-  max-width: 400px;
+  width: 95%;
+  max-width: 350px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   transition: transform 0.3s;
   }
@@ -60,7 +65,7 @@
   transform: scale(1.05);
 }
 button {
-  padding: 10px 20px;
+  padding: 12px;
   border: none;
   border-radius: 10px;
   background: #ff6f91;
@@ -165,8 +170,8 @@ button {
 
 
 .gallery img {
-  width: 150px;
-  height: 180px;
+  width: 90px;
+  height: 120px;
   object-fit: cover;
   transition: 0.3s;
   border-radius: 15px;
@@ -203,11 +208,10 @@ button {
   justify-content: center;
   gap: 15px;
   margin-top: 30px;*/
-}
 
 .photo {
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 65px;
   object-fit: cover;
   border-radius: 15px;
   transform: rotate(calc(-10deg + 20deg * var(--r)));
