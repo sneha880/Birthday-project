@@ -163,11 +163,18 @@ button {
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
 }
 
+
 .gallery img {
-  width: 120px;
-  height: 150px;
-  border-radius: 10px;
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  transition: 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   margin: 5px;
+}
+.gallery img:hover{
+  transform: scale(1.1);
 }
 .firework {
   position: fixed;
@@ -190,12 +197,12 @@ button {
 .firework{
   box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
 }
-.collage {
+/*.collage {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 30px;*/
 }
 
 .photo {
@@ -342,16 +349,15 @@ button {
     <img src="image.jpeg">
     <img src="image1.jpeg">
     <img src="image7.jpeg">
+    <img src="image12.jpeg">
+  <img src="image2.jpeg" >
+  <img src="image5.jpeg" >
+  <img src="image13.jpeg" >
+  <img src="image3.jpeg" >
       </div>
       <div class="rope"></div>
 
-      <div class="collage">
-  <img src="image7.jpeg" class="photo">
-  <img src="image6.jpeg" class="photo">
-  <img src="image5.jpeg" class="photo">
-  <img src="image4.jpeg" class="photo">
-  <img src="image3.jpeg" class="photo">
-  </div>
+      
 <div id="popup" class="popup">
   <p id="popupText"></p>
 </div>
