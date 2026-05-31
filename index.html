@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Maa ❤️</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+     background-image: url(background3.jpeg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     min-height: 100vh;
+    }
+    #bgvideo{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      
+      filter: brightness(0.7);
+      backdrop-filter: blur(2px);
+      z-index: -1;
+    }
+    h1 {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.card {
+  background: white;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  }
+#cake {
+  font-size: 80px;
+  margin-top: 10px;
+  transition: transform 0.5s;
+}
+
+.cut {
+  transform: scale(1.2) rotate(-10deg);
+}
+.card:hover {
+  transform: scale(1.05);
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6f91;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.hidden {
+  display: none;
+}
+.balloon {
+  width: 50px;
+  height: 65px;
+  background: red;
+  border-radius: 50% 50% 45% 45%;
+  position: absolute;
+  bottom: -120px;
+  animation: float 8s linear infinite;
+}
+.balloon {
+    background: radial-gradient(circle at 30% 30%, #ffffff88, currentColor);
+}
+
+/* Balloon knot */
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Wavy rope */
+.balloon::before {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  width: 2px;
+  height: 60px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    #444 0px,
+    #444 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  border-radius: 10px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-400px) translateX(20px);
+  }
+  100% {
+    transform: translateY(-800px) translateX(-20px);
+  }
+}
+.heart {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  bottom: -120px;
+  animation: float 8s linear infinite;
+}
+
+/* SVG inside */
+.heart svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Rope */
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 2px;
+  height: 60px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    #444 0px,
+    #444 5px,
+    transparent 5px,
+    transparent 10px
+  );
+}
+.heart svg {
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
+}
+
+.gallery img {
+  width: 120px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.firework {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes explode {
+  0% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+.firework{
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: rotate(calc(-10deg + 20deg * var(--r)));
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* random rotation */
+.photo:nth-child(1) { --r: 0.1; }
+.photo:nth-child(2) { --r: 0.5; }
+.photo:nth-child(3) { --r: 0.9; }
+.photo:nth-child(4) { --r: 0.3; }
+.photo:nth-child(5) { --r: 0.7; }
+.photo:nth-child(6) { --r: 0.5; }
+.photo:nth-child(7) { --r: 0.9; }
+
+/* hover effect */
+.photo:hover {
+  transform: scale(1.2) rotate(0deg);
+  z-index: 10;
+}
+.photo {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+.photo:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.photo:nth-child(2) {
+  animation-delay: 1s;
+}
+.photo:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.photo:nth-child(4) {
+  animation-delay: 2s;
+}
+.photo:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.photo:nth-child(6){
+  animation-delay: 3s;
+}
+.photo:nth-child(7){
+  animation-delay: 3.5s;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6f91;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: none;
+  z-index: 999;
+}
+.heart-collage {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* heart positioning */
+.photo:nth-child(1) { top: 0; left: 100px; }
+.photo:nth-child(2) { top: 50px; left: 40px; }
+.photo:nth-child(3) { top: 50px; right: 40px; }
+.photo:nth-child(4) { top: 120px; left: 0; }
+.photo:nth-child(5) { top: 120px; right: 0; }
+.photo:nth-child(6) { top: 200px; left: 50px; }
+.photo:nth-child(7) { top: 200px; left: 150px;}
+
+
+.photo:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+
+  </style>
+</head>
+<body>
+     <h1>🎉 Happy Birthday Maa 🎂</h1> 
+     <div class="card">
+     <p>Dear Maa, ❤️<br>
+     You are the most special person in my life. Thank you for your love, care, and support. 💖</p>
+     <button onclick="showMessage()">Click for Surprise 🎁</button>
+     <p id="message" class="hidden">You are my strength and happiness! Love you forever 💕</p>
+     </div> 
+     
+     <div class="card">
+        <h3>🎶 Play Birthday Music</h3>
+    <button onclick="playMusic1()">Play Music ▶️</button>
+<button onclick="stopMusic1()">Stop⏹️</button>
+     <audio id="music1">
+     <source src="music.mp3" type="audio/mpeg">
+     </audio>
+    <br><br>
+     <button onclick="playMusic2()">Play Music ▶️</button>
+     <button onclick="stopMusic2()">Stop⏹️</button>
+     <audio id="music2">
+     <source src="music1.mp3" type="audio/mpeg">
+     </audio>
+    
+     </div>  
+     <div class="video">
+      <video autoplay muted loop  playsinline id="bgvideo">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+     </div>
+      
+<div class="card">
+  <h3>🎂 Cut the Cake</h3>
+  <button onclick="cutCake()">Cut Cake 🔪</button>
+  <div id="cake">🎂</div>
+</div>
+     
+      <div class="card gallery">
+    <h3>📸 Memories</h3>
+    <img src="image.jpeg">
+    <img src="image1.jpeg">
+    <img src="image7.jpeg">
+      </div>
+      <div class="rope"></div>
+
+      <div class="collage">
+  <img src="image7.jpeg" class="photo">
+  <img src="image6.jpeg" class="photo">
+  <img src="image5.jpeg" class="photo">
+  <img src="image4.jpeg" class="photo">
+  <img src="image3.jpeg" class="photo">
+  </div>
+<div id="popup" class="popup">
+  <p id="popupText"></p>
+</div>
+<div class="heart-collage">
+  <img src="image10.jpeg" class="photo" data-msg="This is our beautiful memory ❤️" >
+  <img src="image11.jpeg" class="photo" data-msg="Love you Maa 💖">
+  <img src="image9.jpeg" class="photo" data-msg="You are my strength 💪">
+  <img src="image3.jpeg" class="photo" data-msg="Best moments together 🥰">
+  <img src="image7.jpeg" class="photo" data-msg="Thank you for everything 🙏">
+  <img src="image5.jpeg" class="photo" data-msg="Forever my hero 🌸">
+  <img src="image13.jpeg" class="photo" data-msg="💖💖❤️❤️🥰🥰">
+</div>
+
+
+       <script>
+    function showMessage() {
+      document.getElementById("message").classList.remove("hidden");
+    }
+
+    function playMusic1() {
+        let music1 =
+      document.getElementById("music1");
+        music1.play();
+    }
+    function playMusic2() {
+        let music2 =
+      document.getElementById("music2");
+        music2.play();
+    }
+    
+    function stopMusic1() {
+        let music1 =
+      document.getElementById("music1");
+        music1.pause();
+        music1.currentTime = 0;
+    }
+    function stopMusic2() {
+        let music2 =
+      document.getElementById("music2");
+        music2.pause();
+        music2.currentTime = 0;
+    }
+    for (let i = 0; i < 12; i++) {
+  let balloon = document.createElement("div");
+  balloon.classList.add("balloon");
+
+  // Random position
+  balloon.style.left = Math.random() * 100 + "vw";
+
+  // Random color
+  balloon.style.background = `hsl(${Math.random() * 360}, 80%, 65%)`;
+
+  // Random animation delay
+  balloon.style.animationDuration = (6 + Math.random() * 4) + "s";
+  balloon.style.animationDelay = Math.random() * 5 + "s";
+
+  document.body.appendChild(balloon);
+    }
+
+    
+   for (let i = 0; i < 8; i++) {
+  let heart = document.createElement("div");
+  heart.classList.add("heart");
+
+  // Perfect SVG heart
+  heart.innerHTML = `
+    <svg viewBox="0 0 32 29.6">
+      <path fill="hsl(${Math.random()*360}, 80%, 60%)"
+        d="M23.6,0c-3.4,0-6.4,2-7.6,5.1C14.8,2,11.8,0,8.4,0
+        C3.8,0,0,3.8,0,8.4c0,9.4,16,21.2,16,21.2s16-11.8,16-21.2
+        C32,3.8,28.2,0,23.6,0z"/>
+    </svg>
+  `;
+
+  // Random position
+  heart.style.left = Math.random() * 100 + "vw";
+
+  // Different speed
+  heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+
+  document.body.appendChild(heart);
+}
+
+function cutCake() {
+  let cake = document.getElementById("cake");
+  cake.classList.add("cut");
+
+  setTimeout(() => {
+    cake.innerHTML = "🍰🍰"; // cake sliced
+  }, 500);
+}
+function createFirework(x, y) {
+  for (let i = 0; i < 30; i++) {
+    let particle = document.createElement("div");
+    particle.className = "firework";
+
+    // random color
+    particle.style.background = `hsl(${Math.random()*360},100%,50%)`;
+
+    // starting position
+    particle.style.left = x + "px";
+    particle.style.top = y + "px";
+
+    // random explosion direction
+    let angle = Math.random() * 2 * Math.PI;
+    let distance = Math.random() * 100 + 50;
+
+    let xMove = Math.cos(angle) * distance;
+    let yMove = Math.sin(angle) * distance;
+
+    particle.style.setProperty("--x", xMove + "px");
+    particle.style.setProperty("--y", yMove + "px");
+
+    particle.style.animation = "explode 1s ease-out forwards";
+
+    document.body.appendChild(particle);
+
+    // remove after animation
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
+  }
+}
+document.addEventListener("click", function(e) {
+  createFirework(e.clientX, e.clientY);
+});
+setInterval(() => {
+  let x = Math.random() * window.innerWidth;
+  let y = Math.random() * window.innerHeight / 2;
+  createFirework(x, y);
+}, 2000);
+
+window.onload = function() {
+let messages = [
+  "This is our beautiful memory ❤️",
+  "Love you Maa 💖",
+  "You are my strength 💪",
+  "Best moments together 🥰",
+  "Thank you for everything 🙏",
+  "Forever my hero 🌸"
+];
+
+let photos = document.querySelectorAll(".photo");
+
+photos.forEach((photo, i) => {
+  photo.addEventListener("click", () => {
+    let popup = document.getElementById("popup");
+    let text = document.getElementById("popupText");
+
+    text.innerText = photo.getAttribute("data-msg");
+    popup.style.display = "block";
+
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 2000);
+  });
+});
+};
+setInterval(() => {
+  let photos = document.querySelectorAll(".photo");
+  let random = Math.floor(Math.random() * photos.length);
+
+  photos[random].style.transform = "scale(1.3)";
+
+  setTimeout(() => {
+    photos[random].style.transform = "scale(1)";
+  }, 1000);
+}, 2000);
+
+
+        
+    </script>
+</body>
+</html>
